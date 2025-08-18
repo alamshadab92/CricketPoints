@@ -1,0 +1,131 @@
+/* Body & Page Container */
+body { 
+    font-family: 'Segoe UI', Arial, sans-serif; 
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(160deg, #e0f2ff 0%, #f0f9ff 100%);
+    color: #1e3a8a;
+}
+
+/* Page Container */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header Banner */
+header {
+    background: linear-gradient(90deg, #3b82f6, #60a5fa);
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 36px;
+    margin: 0;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+/* Section Cards */
+div.section {
+    background-color: #ffffff;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    border-left: 5px solid #3b82f6;
+}
+
+/* Flex row for inputs */
+.inning-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 15px; /* space between inputs */
+}
+
+.inning-row label {
+    margin-right: 5px;
+    font-weight: 500;
+}
+
+/* Input & Select */
+input, select {
+    margin: 5px 0;
+    padding: 8px 10px;
+    border-radius: 8px;
+    border: 1px solid #93c5fd;
+    font-size: 14px;
+    width: 80px;
+}
+
+button {
+    background: linear-gradient(90deg, #3b82f6, #2563eb);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 15px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+button:hover {
+    background: linear-gradient(90deg, #2563eb, #1e40af);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* Tables */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+th, td {
+    border: 1px solid #93c5fd;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #3b82f6;
+    color: white;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #e0f2ff;
+}
+
+tr.threshold-change {
+    background-color: #bfdbfe; /* highlight threshold change */
+}
+
+/* Info Paragraphs */
+p.info {
+    font-size: 14px;
+    color: #1e40af;
+    margin: 5px 0;
+}
+
+/* Responsive Cards */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 10px;
+    }
+    div.section {
+        margin: 10px 0;
+    }
+    .inning-row {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
