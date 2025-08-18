@@ -3,63 +3,81 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cricket Points Scenario</title>
+<title>ChasePoints</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <div class="container">
   <header>
-    <h1>Cricket Points Scenario Calculator</h1>
+    <h1>ChasePoints - Cricket Scenario Calculator</h1>
   </header>
 
+  <!-- First Inning -->
   <div class="section">
     <h2>First Inning</h2>
     <div class="inning-row">
-      <label>Runs:</label>
-      <input type="number" id="firstRuns" value="0">
-
-      <label>Wickets:</label>
-      <input type="number" id="firstWickets" value="0">
-
-      <label>Overs:</label>
-      <input type="number" id="firstOvers" value="16">
+      <div>
+        <label>Runs</label>
+        <input type="number" id="firstRuns" value="0">
+      </div>
+      <div>
+        <label>Wickets</label>
+        <input type="number" id="firstWickets" value="0">
+      </div>
+      <div>
+        <label>Overs</label>
+        <input type="number" id="firstOvers" value="16">
+      </div>
     </div>
   </div>
 
+  <!-- Second Inning -->
   <div class="section">
     <h2>Second Inning (Current State)</h2>
     <div class="inning-row">
-      <label>Runs:</label>
-      <input type="number" id="secondRuns" value="0">
-
-      <label>Wickets:</label>
-      <input type="number" id="secondWickets" value="0">
-
-      <label>Overs:</label>
-      <input type="number" id="secondOvers" value="0">
-
-      <label>Balls:</label>
-      <input type="number" id="secondBalls" value="0" min="0" max="5">
+      <div>
+        <label>Runs</label>
+        <input type="number" id="secondRuns" value="0">
+      </div>
+      <div>
+        <label>Wickets</label>
+        <input type="number" id="secondWickets" value="0">
+      </div>
+      <div>
+        <label>Overs</label>
+        <input type="number" id="secondOvers" value="0">
+      </div>
+      <div>
+        <label>Balls</label>
+        <input type="number" id="secondBalls" value="0" min="0" max="5">
+      </div>
     </div>
   </div>
 
+  <!-- Options -->
   <div class="section">
     <h2>Options</h2>
     <div class="inning-row">
-      <label>Scenario:</label>
-      <select id="scenario">
-        <option value="winning">W</option>
-        <option value="losing">L</option>
-        <option value="both">Both</option>
-      </select>
-
-      <label>Planned Wickets to Lose:</label>
-      <input type="number" id="plannedWickets" value="0" min="0" max="10">
-
-      <button onclick="generateScenario()">Generate Scenario Table</button>
+      <div>
+        <label>Scenario</label>
+        <select id="scenario">
+          <option value="winning">W</option>
+          <option value="losing">L</option>
+          <option value="both">Both</option>
+        </select>
+      </div>
+      <div>
+        <label>Planned Wickets</label>
+        <input type="number" id="plannedWickets" value="0" min="0" max="10">
+      </div>
+      <div>
+        <label>&nbsp;</label>
+        <button onclick="generateScenario()">Generate Scenario Table</button>
+      </div>
     </div>
   </div>
 
+  <!-- Scenario Tables -->
   <div id="tables"></div>
 </div>
 

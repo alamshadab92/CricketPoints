@@ -41,29 +41,30 @@ div.section {
     border-left: 5px solid #3b82f6;
 }
 
-/* Flex row for inputs */
+/* Grid Layout for Inputs */
 .inning-row {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 15px; /* space between inputs */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+    gap: 15px;
+    text-align: center;
 }
 
 .inning-row label {
-    margin-right: 5px;
+    display: block;
     font-weight: 500;
+    margin-bottom: 5px;
 }
 
-/* Input & Select */
-input, select {
-    margin: 5px 0;
-    padding: 8px 10px;
+.inning-row input,
+.inning-row select {
+    width: 60px; /* compact input width */
+    padding: 6px 5px;
     border-radius: 8px;
     border: 1px solid #93c5fd;
     font-size: 14px;
-    width: 80px;
 }
 
+/* Button */
 button {
     background: linear-gradient(90deg, #3b82f6, #2563eb);
     color: white;
@@ -115,7 +116,7 @@ p.info {
     margin: 5px 0;
 }
 
-/* Responsive Cards */
+/* Responsive adjustments */
 @media (max-width: 768px) {
     .container {
         width: 95%;
@@ -124,8 +125,15 @@ p.info {
     div.section {
         margin: 10px 0;
     }
+    /* horizontal scroll if grid is too wide */
     .inning-row {
-        flex-direction: column;
-        gap: 10px;
+        overflow-x: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .inning-row input, .inning-row select {
+        width: 50px;
+        font-size: 13px;
     }
 }
